@@ -1,0 +1,26 @@
+Package: mTree
+Title: Discover Heterogeneous Treatment Effect Subgroups 
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Joe", "Rigdon", , "jrigdon@wakehealth.edu", role = c("aut")),
+    person("Lucy", "D'Agostino McGowan", , "lucydagostino@gmail.com", role = c("aut", "cre"))
+    )
+Description: in clinical trials and observational studies that are balanced on 
+    important variables. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    cli,
+    halfmoon,
+    Hmisc,
+    LTRCtrees,
+    MASS,
+    optmatch,
+    partykit,
+    RI2by2,
+    survival
+Depends: 
+    R (>= 3.5)
+LazyData: true

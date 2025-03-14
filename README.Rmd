@@ -1,19 +1,28 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # mTree
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of mTree is to discover heterogeneous treatment effect
-subgroups in clinical trials and observational studies that are balanced
-on important variables.
+The goal of mTree is to discover heterogeneous treatment effect subgroups in clinical trials and observational studies that are balanced on important variables. 
 
 ## Installation
 
-You can install the development version of mTree from
-[GitHub](https://github.com/) with:
+You can install the development version of mTree from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
@@ -22,12 +31,9 @@ pak::pak("joerigdon/mTree")
 
 ## Example
 
-Here is an example of simulated data from Rigdon, J., Baiocchi, M. &
-Basu, S. Preventing false discovery of heterogeneous treatment effect
-subgroups in randomized trials. Trials 19, 382 (2018).
-<https://doi.org/10.1186/s13063-018-2774-5>.
+Here is an example of simulated data from Rigdon, J., Baiocchi, M. & Basu, S. Preventing false discovery of heterogeneous treatment effect subgroups in randomized trials. Trials 19, 382 (2018). https://doi.org/10.1186/s13063-018-2774-5.
 
-``` r
+```{r example, cache = TRUE, message = FALSE, warning = FALSE}
 library(mTree)
 
 covariates <- c("age", "black", "sbp", "dbp", "scr", "eGFR", "statin",
@@ -55,4 +61,4 @@ tree <- get_mtree(avg_matched_data, covariates)
 plot(tree)
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+
